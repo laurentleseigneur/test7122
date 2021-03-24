@@ -8,9 +8,34 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_DSqBBe_DEeeqC8gnsZzn2Q" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_DSqBBu_DEeeqC8gnsZzn2Q" name="" content="" returnTypeFixed="true"/>
         </elements>
+        <elements xmi:type="process:Task" xmi:id="_BFffAIvTEeupx4plgwU7LA" name="Step1" outgoing="_F-Ry4IvTEeupx4plgwU7LA" incoming="_Ai_O4IvTEeupx4plgwU7LA" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_AivXQYvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_AivXQIvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_AivXQovTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_AivXQ4vTEeupx4plgwU7LA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_AivXRIvTEeupx4plgwU7LA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_AivXRYvTEeupx4plgwU7LA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_AivXR4vTEeupx4plgwU7LA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_AivXRovTEeupx4plgwU7LA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_BFgGEYvTEeupx4plgwU7LA">
+            <targetForm xmi:type="expression:Expression" xmi:id="_BFgGEovTEeupx4plgwU7LA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_BFgGEIvTEeupx4plgwU7LA"/>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_BFgGE4vTEeupx4plgwU7LA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ANDGateway" xmi:id="_F-FloIvTEeupx4plgwU7LA" name="Gateway1" incoming="_F-Ry4IvTEeupx4plgwU7LA">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_F-GMsYvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_F-GMsIvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_F-GMsovTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:StartMessageEvent" xmi:id="_HFUTcIvTEeupx4plgwU7LA" name="Start1">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_HFU6gYvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_HFU6gIvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_HFU6govTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
+        </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_DSqBKO_DEeeqC8gnsZzn2Q" name="Manager lane" actor="_4CHPEOBIEemZQPyPcJEEEA">
-        <elements xmi:type="process:CallActivity" xmi:id="_1hZbAOqqEemfe-qAZIUi1w" documentation="This call the &quot;Review expense report&quot; process. It will reuse (no duplication) the expense report created in the current process." name="Start the review process" outgoing="_2XIwMOqqEemfe-qAZIUi1w" incoming="_DSqBau_DEeeqC8gnsZzn2Q">
+        <elements xmi:type="process:CallActivity" xmi:id="_1hZbAOqqEemfe-qAZIUi1w" documentation="This call the &quot;Review expense report&quot; process. It will reuse (no duplication) the expense report created in the current process." name="Start the review process" outgoing="_2XIwMOqqEemfe-qAZIUi1w _Ai_O4IvTEeupx4plgwU7LA" incoming="_DSqBau_DEeeqC8gnsZzn2Q">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_1hZbAuqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_1hZbAeqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_1hZbA-qqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
@@ -60,6 +85,14 @@
       <connections xmi:type="process:SequenceFlow" xmi:id="_2XIwMOqqEemfe-qAZIUi1w" target="_2XD3sOqqEemfe-qAZIUi1w" source="_1hZbAOqqEemfe-qAZIUi1w">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_2XJXQOqqEemfe-qAZIUi1w"/>
         <condition xmi:type="expression:Expression" xmi:id="_2XJXQeqqEemfe-qAZIUi1w" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_Ai_O4IvTEeupx4plgwU7LA" target="_BFffAIvTEeupx4plgwU7LA" source="_1hZbAOqqEemfe-qAZIUi1w">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Ai_18IvTEeupx4plgwU7LA"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Ai_18YvTEeupx4plgwU7LA" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_F-Ry4IvTEeupx4plgwU7LA" target="_F-FloIvTEeupx4plgwU7LA" source="_BFffAIvTEeupx4plgwU7LA">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_F-Ry4YvTEeupx4plgwU7LA"/>
+        <condition xmi:type="expression:Expression" xmi:id="_F-Ry4ovTEeupx4plgwU7LA" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_DSqBeu_DEeeqC8gnsZzn2Q" documentation="Employee who will submit the expense report." name="Employee actor" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_4CHPEOBIEemZQPyPcJEEEA" documentation="Manager who will review the expense report. Actor is actually override by an actor filter that select the employee manager." name="Manager actor"/>
@@ -150,6 +183,22 @@
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DSqBo-_DEeeqC8gnsZzn2Q" x="60" y="68"/>
             </children>
+            <children xmi:type="notation:Shape" xmi:id="_BFgGFIvTEeupx4plgwU7LA" type="3005" element="_BFffAIvTEeupx4plgwU7LA" fontName=".AppleSystemUIFont" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BFgtIIvTEeupx4plgwU7LA" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BFgGFYvTEeupx4plgwU7LA" x="465" y="92" width="100" height="50"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_F-IB4IvTEeupx4plgwU7LA" type="3009" element="_F-FloIvTEeupx4plgwU7LA" fontName=".AppleSystemUIFont">
+              <children xmi:type="notation:DecorationNode" xmi:id="_F-IB4ovTEeupx4plgwU7LA" type="5020">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_F-IB44vTEeupx4plgwU7LA" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F-IB4YvTEeupx4plgwU7LA" x="681" y="84"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_HFVhkIvTEeupx4plgwU7LA" type="3012" element="_HFUTcIvTEeupx4plgwU7LA" fontName=".AppleSystemUIFont">
+              <children xmi:type="notation:DecorationNode" xmi:id="_HFVhkovTEeupx4plgwU7LA" type="5029">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_HFVhk4vTEeupx4plgwU7LA" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HFVhkYvTEeupx4plgwU7LA" x="152" y="80"/>
+            </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_DSqBp-_DEeeqC8gnsZzn2Q"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_DSqBqO_DEeeqC8gnsZzn2Q" fontName="Ubuntu"/>
@@ -198,6 +247,20 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_2XJ-UeqqEemfe-qAZIUi1w" fontName="Noto Sans"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2XJ-UuqqEemfe-qAZIUi1w" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_AjAdAIvTEeupx4plgwU7LA" type="4001" element="_Ai_O4IvTEeupx4plgwU7LA" source="_1haCEOqqEemfe-qAZIUi1w" target="_BFgGFIvTEeupx4plgwU7LA" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_AjBEEIvTEeupx4plgwU7LA" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_AjBEEYvTEeupx4plgwU7LA" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_AjAdAYvTEeupx4plgwU7LA" fontName=".AppleSystemUIFont"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AjAdAovTEeupx4plgwU7LA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_F-SZ8IvTEeupx4plgwU7LA" type="4001" element="_F-Ry4IvTEeupx4plgwU7LA" source="_BFgGFIvTEeupx4plgwU7LA" target="_F-IB4IvTEeupx4plgwU7LA" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_F-SZ84vTEeupx4plgwU7LA" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_F-SZ9IvTEeupx4plgwU7LA" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_F-SZ8YvTEeupx4plgwU7LA" fontName=".AppleSystemUIFont"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_F-SZ8ovTEeupx4plgwU7LA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

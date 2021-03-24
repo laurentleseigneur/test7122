@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>bonita-connector-email-reader</id>
+  <version>1.0</version>
+  <category icon="messaging.png" id="messaging"/>
+  <input defaultValue="imap" mandatory="true" name="emailProtocol" type="java.lang.String"/>
+  <input mandatory="true" name="emailHost" type="java.lang.String"/>
+  <input mandatory="true" name="emailPort" type="java.lang.Integer"/>
+  <input mandatory="true" name="emailUsername" type="java.lang.String"/>
+  <input mandatory="true" name="emailPassword" type="java.lang.String"/>
+  <input defaultValue="false" mandatory="true" name="emailSSL" type="java.lang.Boolean"/>
+  <input defaultValue="Inbox" mandatory="false" name="emailFolderName" type="java.lang.String"/>
+  <input defaultValue="10" name="emailBatchSize" type="java.lang.Integer"/>
+  <output name="mails" type="java.util.List"/>
+  <page id="EmailReceiverPage">
+    <widget xsi:type="definition:Text" id="protocol" inputName="emailProtocol"/>
+    <widget xsi:type="definition:Text" id="EmailHost" inputName="emailHost"/>
+    <widget xsi:type="definition:Text" id="EmailPort" inputName="emailPort"/>
+    <widget xsi:type="definition:Text" id="emailUID" inputName="emailUsername"/>
+    <widget xsi:type="definition:Password" id="emailPassword" inputName="emailPassword"/>
+    <widget xsi:type="definition:Text" id="ssl" inputName="emailSSL"/>
+    <widget xsi:type="definition:Text" id="folderName" inputName="emailFolderName"/>
+    <widget xsi:type="definition:Text" id="batchSize" inputName="emailBatchSize"/>
+  </page>
+</definition:ConnectorDefinition>
