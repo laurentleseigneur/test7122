@@ -28,11 +28,6 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_F-GMsIvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_F-GMsovTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:StartMessageEvent" xmi:id="_HFUTcIvTEeupx4plgwU7LA" name="Start1">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_HFU6gYvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_HFU6gIvTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_HFU6govTEeupx4plgwU7LA" name="" content="" returnTypeFixed="true"/>
-        </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_DSqBKO_DEeeqC8gnsZzn2Q" name="Manager lane" actor="_4CHPEOBIEemZQPyPcJEEEA">
         <elements xmi:type="process:CallActivity" xmi:id="_1hZbAOqqEemfe-qAZIUi1w" documentation="This call the &quot;Review expense report&quot; process. It will reuse (no duplication) the expense report created in the current process." name="Start the review process" outgoing="_2XIwMOqqEemfe-qAZIUi1w _Ai_O4IvTEeupx4plgwU7LA" incoming="_DSqBau_DEeeqC8gnsZzn2Q">
@@ -192,12 +187,6 @@
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_F-IB44vTEeupx4plgwU7LA" y="5"/>
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F-IB4YvTEeupx4plgwU7LA" x="681" y="84"/>
-            </children>
-            <children xmi:type="notation:Shape" xmi:id="_HFVhkIvTEeupx4plgwU7LA" type="3012" element="_HFUTcIvTEeupx4plgwU7LA" fontName=".AppleSystemUIFont">
-              <children xmi:type="notation:DecorationNode" xmi:id="_HFVhkovTEeupx4plgwU7LA" type="5029">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_HFVhk4vTEeupx4plgwU7LA" y="5"/>
-              </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HFVhkYvTEeupx4plgwU7LA" x="152" y="80"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_DSqBp-_DEeeqC8gnsZzn2Q"/>
